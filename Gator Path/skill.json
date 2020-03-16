@@ -1,0 +1,52 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "A journey through Gainesville.",
+          "examplePhrases": [
+            "Alexa open gator path",
+            "Where Am I",
+            "Start Over"
+          ],
+          "keywords": [
+            "Gator"
+          ],
+          "name": "Gator Path",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "description": "You find yourself alone in Gainesville and want to make friends.",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "It\u0027s a text-based adventure game that gives players choices to make.",
+      "category": "CHOOSE_YOUR_OWN_STORY",
+      "distributionMode": "PRIVATE",
+      "distributionCountries": [
+        "US"
+      ]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:371531666767:function:d746072d-609b-4d4a-9c0a-dc73b7100f33:Release_1"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {}
+      },
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "gator-path",
+  "version": "1.0.0",
+  "description": "A text based adventure game set in the University of Florida",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alec Shears, Munish Tanwar, Carlson Joseph, Jaeyong Sin",
+  "dependencies": {
+    "ask-sdk-core": "^2.6.0",
+    "ask-sdk-model": "^1.18.0",
+    "aws-sdk": "^2.326.0"
+  }
+}
