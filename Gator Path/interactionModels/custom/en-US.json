@@ -18,8 +18,7 @@
         {
           "name": "AMAZON.StopIntent",
           "samples": [
-            "quit",
-            "stop"
+            "quit"
           ]
         },
         {
@@ -39,6 +38,9 @@
           "name": "ThirteenthStreetIntent",
           "slots": [],
           "samples": [
+            "Go to Thirteenth Street ",
+            "Walk down Thirteenth",
+            "Walk down Thirteenth Street",
             "Go Thirteenth",
             "Go Thirteenth Street",
             "Go down Thirteenth",
@@ -51,6 +53,7 @@
           "name": "UniversityAvenueIntent",
           "slots": [],
           "samples": [
+            "Walk down University Avenue",
             "Walk down University",
             "University Ave",
             "University",
@@ -61,6 +64,8 @@
           "name": "HighFiveIntent",
           "slots": [],
           "samples": [
+            "Give Dennis a high five",
+            "High five Dennis",
             "give him a high five",
             "High Five"
           ]
@@ -69,6 +74,8 @@
           "name": "RunPastIntent",
           "slots": [],
           "samples": [
+            "run from him",
+            "run",
             "run away",
             "Run Past"
           ]
@@ -77,6 +84,7 @@
           "name": "HelpUpIntent",
           "slots": [],
           "samples": [
+            "help the knight up",
             "help knight",
             "help knight up",
             "help him up",
@@ -87,7 +95,8 @@
           "name": "KeepRunningIntent",
           "slots": [],
           "samples": [
-            "run",
+            "Conintue to run",
+            "Keep going",
             "Keep on running",
             "Keep Running"
           ]
@@ -96,6 +105,7 @@
           "name": "StartOverIntent",
           "slots": [],
           "samples": [
+            "Restart",
             "start again",
             "Start Over"
           ]
@@ -104,6 +114,8 @@
           "name": "PointIntent",
           "slots": [],
           "samples": [
+            "direct the alligator where to go",
+            "point to stadium",
             "point at the stadium",
             "point to it",
             "point where the stadium is",
@@ -127,7 +139,7 @@
           "name": "WhereAmIIntent",
           "slots": [],
           "samples": [
-            "where the heck am i",
+            "What part am I at",
             "what place am i",
             "Where Am I"
           ]
@@ -136,5 +148,5 @@
       "types": []
     }
   },
-  "version": "16"
+  "version": "19"
 }
