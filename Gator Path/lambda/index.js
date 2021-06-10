@@ -1,4 +1,4 @@
-//Gator Path Created by Alec Shears, Munish Tanwar, Carlson Joseph, Jaeyong Si
+//Gator Path Created by Alec Shears, Munish Tanwar, Carlson Joseph, Jaeyong Sin
 //Helper function used from Hello World Template Amazon Provided us
 const Alexa = require('ask-sdk-core');
 
@@ -57,7 +57,8 @@ const StreetIntentHandler = {
         }
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            .reprompt()
+            // .reprompt()
+            .reprompt("I am sorry, I didn't catch that.")
             .getResponse();
     }
 };
@@ -84,7 +85,8 @@ const DennisIntentHandler = {
         }
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            .reprompt()
+            // .reprompt()
+            .reprompt("I am sorry, I didn't catch that.")
             .getResponse();
     }
 };
@@ -113,7 +115,8 @@ const KnightIntentHandler = {
         }
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            .reprompt()
+            // .reprompt()
+            .reprompt("I am sorry, I didn't catch that.")
             .getResponse();
     }
 };
@@ -142,7 +145,8 @@ const AlligatorIntentHandler = {
         }
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            .reprompt()
+            // .reprompt()
+            .reprompt("I am sorry, I didn't catch that.")
             .getResponse();
     }
 };
@@ -186,7 +190,7 @@ const WhereAmIIntentHandler = {
         }
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            .reprompt()
+            .reprompt("I am sorry, I didn't catch that.")
             .getResponse();
     }
 };
