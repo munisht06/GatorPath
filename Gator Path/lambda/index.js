@@ -24,7 +24,8 @@ const LaunchRequestHandler = {
         keepRunning = false;
         end = false;
         
-        const speakOutput = 'Welcome to the mythical land of Gainesville. You wake up on a street corner alone with no memory. You decide you need to find friends. You look up and the signs say 13th Street and University Avenue. Which Street would you like to go down?';
+        
+        var speakOutput = 'Welcome to the mythical land of Gainesville. You wake up on a street corner alone with no memory. You hear century tower in the distance. <audio src="soundbank://soundlibrary/alarms/chimes_and_bells/chimes_bells_11"/> You decide you need to find friends. You look up and the signs say 13th Street and University Avenue. <audio src="soundbank://soundlibrary/transportation/amzn_sfx_car_drive_past_01"/> <audio src="soundbank://soundlibrary/transportation/amzn_sfx_car_honk_2x_01"/> Which Street would you like to go down?';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
@@ -45,12 +46,14 @@ const StreetIntentHandler = {
         if(Alexa.getIntentName(handlerInput.requestEnvelope) === 'ThirteenthStreetIntent')
         {
             thirteenthStreet = true;
-            speakOutput = 'You walk down 13th Street and are approached by Dennis. He goes to give you a high five. Do you high five him or run past him?';
+            speakOutput = 'You walk down 13th Street and are approached by Dennis.  <voice name="Matthew"> <amazon:emotion name="excited" intensity="high">Hey Man! Can I have a high five!</amazon:emotion></voice>. Do you high five him or run past him?';
+            
+            
         }
         else if(Alexa.getIntentName(handlerInput.requestEnvelope) === 'UniversityAvenueIntent')
         {
             universityAvenue = true;
-            speakOutput = 'You walk down University Avenue and are approached by an Alligator. The Alligator says Hello, could you show me how to get to the football stadium. Do you point to it or walk him there';
+            speakOutput = 'You walk down University Avenue and are approached by an Alligator. The Alligator says <voice name="Russell"> <amazon:emotion name="excited" intensity="medium">Hello, could you show me how to get to the football stadium.</amazon:emotion></voice> Do you point to it or walk him there';
         }
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -71,13 +74,13 @@ const DennisIntentHandler = {
         if(Alexa.getIntentName(handlerInput.requestEnvelope) === 'HighFiveIntent')
         {
             highFive = true;
-            speakOutput = 'You give Dennis a high five. You start talking about your mutual love for the show Bobs Burgers. After an hour of chatting you realize you have quickly achieved your goal. You have made a friend. It turns out, all you needed to do was look. The End. You can say Start Over to begin anew or Quit to exit the game.';
+            speakOutput = 'You give Dennis a high five.  You start talking about your mutual love for the show Bobs Burgers. After an hour of chatting you realize you have quickly achieved your goal. You have made a friend. It turns out, all you needed to do was look. The End. <audio src="soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_outro_01"/> You can say Start Over to begin anew or Quit to exit the game.';
             end = true;
         }
         else if(Alexa.getIntentName(handlerInput.requestEnvelope) === 'RunPastIntent')
         {
             runPast = true;
-            speakOutput = 'In a panic, you run past Dennis and just keep running. You glance behind you to see if you are being followed. While distracted, you accidently run into a man in a knight costume. He falls over and says ah that hurt. Do you help him up or keep running?';
+            speakOutput = ' <audio src="soundbank://soundlibrary/human/amzn_sfx_person_running_01"/> <break time = "1s"/> In a panic, you run past Dennis and just keep running. You glance behind you to see if you are being followed. While distracted, you accidently run into a man in a knight costume. He falls over and says <voice name="Brian"> <amazon:emotion name="excited" intensity="medium"> Ah, where are you off to at such speeds. You need to be more careful</amazon:emotion></voice> Do you help him up or keep running?';
         }
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -98,13 +101,13 @@ const KnightIntentHandler = {
         if(Alexa.getIntentName(handlerInput.requestEnvelope) === 'HelpUpIntent')
         {
             helpUp = true;
-            speakOutput = 'You help the knight up. He thanks you. He says he is from the central lands and is new to this area. You realize that you come from very different places, but are not very different people. He invites you to lunch and you realize something. You have just made... a friend. The End. You can say Start Over to begin anew or Quit to exit the game.';
+            speakOutput = 'You help the knight up. He says <voice name="Brian"> <amazon:emotion name="excited" intensity="medium">"Thank you, I am new here and was feeling very lost, but your kindness has really brightened my day. "</amazon:emotion></voice> <amazon:emotion name="excited" intensity="high"> You realize that you come from very different places, but are not very different people. He invites you to lunch and you realize something. You have just made... a friend. The End. </amazon:emotion> <audio src="soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_outro_01"/> You can say Start Over to begin anew or Quit to exit the game. ';
             end = true;
         }
         else if(Alexa.getIntentName(handlerInput.requestEnvelope) === 'KeepRunningIntent')
         {
             keepRunning = true;
-            speakOutput = 'You keep running. Running and running until you can no longer feel your legs. You stop to catch your breath and notice that there is nobody around you. You have failed at your goal of making a friend. You return home defeated. Game Over. You can say Start Over to begin anew or Quit to exit the game.';
+            speakOutput = '<audio src="soundbank://soundlibrary/human/amzn_sfx_person_running_01"/> <break time = "1s"/><amazon:emotion name="disappointed" intensity="high"> You keep running. Running and running until you can no longer feel your legs. You stop to catch your breath and notice that there is nobody around you. You have failed at your goal of making a friend. You return home defeated. Game Over. <audio src="soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_negative_response_02"/> You can say Start Over to begin anew or Quit to exit the game.  </amazon:emotion>';
             end = true;
             
         }
@@ -126,14 +129,14 @@ const AlligatorIntentHandler = {
         if(Alexa.getIntentName(handlerInput.requestEnvelope) === 'PointIntent')
         {
             
-            speakOutput = 'You point the alligator in the direction he needs to go and he goes on his way. You remember you have homework due at midnight and rush home. You finish the homework and watch TV. Who needs friends anyways. Game Over. You can say Start Over to begin anew or Quit to exit the game.';
+            speakOutput = 'You point the alligator in the direction he needs to go and he goes on his way. You remember you have homework due at midnight and rush home. You finish the homework and watch TV. Who needs friends anyways. Game Over. <audio src="soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_negative_response_02"/> You can say Start Over to begin anew or Quit to exit the game.';
             end = true;
 
         }
         else if(Alexa.getIntentName(handlerInput.requestEnvelope) === 'WalkIntent')
         {
             
-            speakOutput = 'You walk with the alligator. You get to talking and he tells you about his life. You learn all about life in Gainesville hundreds of years ago. He tells you there used to be magic. You arrive at the stadium and he thanks you for your assistance. You stay and talk for a while. You realize you have just made a friend. The End. You can say Start Over to begin anew or Quit to exit the game.';
+            speakOutput = 'You walk with the alligator. <voice name="Russell"> <amazon:emotion name="excited" intensity="medium"> You know, this town has really changed. It used to be filled with magic. I was a student here myself over 100 years ago. While it is a completely different place, I am glad kind people like you still exist.</amazon:emotion></voice> You arrive at the stadium <audio src="soundbank://soundlibrary/sports/crowds/crowds_03"/>. You stay and talk for a while. You realize you have just made a friend. The End. <audio src="soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_outro_01"/> You can say Start Over to begin anew or Quit to exit the game.';
             end = true;
         
         }
@@ -147,8 +150,8 @@ const AlligatorIntentHandler = {
 
 const WhereAmIIntentHandler = {
     canHandle(handlerInput) {
-        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'WhereAmIIntent';
+        return ((Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'WhereAmIIntent') || (Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'));
     },
     handle(handlerInput) {
         var speakOutput = 'Here';
