@@ -13,8 +13,8 @@
             "Gator"
           ],
           "name": "Gator Path",
-          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
           "description": "You find yourself alone in Gainesville and want to make friends.",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
           "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
         }
       },
@@ -43,8 +43,8 @@
       "locales": {
         "en-US": {}
       },
-      "isExportCompliant": true,
       "containsAds": false,
+      "isExportCompliant": true,
       "isChildDirected": false,
       "usesPersonalInfo": false
     }
